@@ -21,7 +21,7 @@
 
     <!-- Main Section: when I will put the entire content of the page -->
      <main>
-        <!-- This 1st section: it will be the banner of the page including the image, title, paragraph and the button -->
+        <!-- 1ST SECTION: it will be the banner of the page including the image, title, paragraph and the button -->
         <section class="banner">
         <img src="images/hero-background.jpg" alt="A woman with a yellow touque smilling while using a coffee machine">
         <!-- h1 is for the banner of the page, which is the biggest sentence of the page that's why is h1 to maintain the hierarchy -->
@@ -31,7 +31,7 @@
         </section>
 
         <section class="welcome">
-            <!-- 2nd section: Welcome part with <p> for the "welcome to my coffee house" and then h2 for the title because h1 was already used for the hero banner, h2 keep the hierarchy -->
+            <!-- 2ND SECTION: Welcome part with <p> for the "welcome to my coffee house" and then h2 for the title because h1 was already used for the hero banner, h2 keep the hierarchy -->
             <p>Welcome to My Coffee House</p>
             <h2>EXPERIENCE A NEW WAY TO TASTE COFFEE</h2>
             <!-- Images of this page, I'll try to put a class for the whole images to organize after and see how it works. I don't know if I can put a <div> here just to organize inside of the section in my mind -->
@@ -44,7 +44,7 @@
             </div>
         </section>
 
-        <!-- 3rd section: What we offer. Same ideia, I'll gonna use the paragraph for the yellow titles and then h2 to maintain the hierarchy. I'm adding a class for each section already because for this time makes sense for me (just to be safe, because it's better to erase than try to find and include after all), but I can change later when I start CSS. -->
+        <!-- 3RD SECTION: What we offer. Same ideia, I'll gonna use the paragraph for the yellow titles and then h2 to maintain the hierarchy. I'm adding a class for each section already because for this time makes sense for me (just to be safe, because it's better to erase than try to find and include after all), but I can change later when I start CSS. -->
          <section class="visit">
             <p>What we Offer</p>
             <h2>Why visit us?</h2>
@@ -70,6 +70,24 @@
             <h2>Made with love</h2>
             <p>We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
          </section>
+
+         <!-- 4TH SECTION: Another hero banner with text on it and two buttons. I'll try to add the picture and then the text, and the button (and a class for each button). I think I'll need an overlay on it, but I'll try to do it on CSS. I'll gonna add a class for the section and then, if I need another classes, I'll add during CSS process -->
+          <section class="menu">
+            <img src="images/coffee-shop.jpeg" alt="A balcony of a coffee shop">
+            <!-- I'll separate then in <div> just to maintain the reasoning in my mind, like "part 1" and "part 2" of the section, justt because I'm not sure if I can add a section inside of a section and <div> has no meaning, it's just a division which is what I want -->
+            <div>
+                <p>Our Menu</p>
+                <h2>Explore what we have to offer you</h2>
+                <!-- I'm using a href for the button to make it clickable, to pretend that navigates somewhere, and bacuse it's nothing somewhere to go, I put # -->
+                <a href="#" class="button-menu">Explore our menu</a>
+            </div>
+
+            <div>
+                <p>Locations</p>
+                <h2>Find your nearest coffee shop</h2>
+                <a href="#" class="button-location">View Locations</a>
+            </div>
+          </section>
      </main>
 </body>
 </html>

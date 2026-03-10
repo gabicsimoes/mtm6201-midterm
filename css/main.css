@@ -49,6 +49,7 @@ table {
 
 /* Starting styles after CSS Reset */
 /* Starting with Mobile First as recommended */
+/* After I will set up all the foundation like background, colour, font, font-size, and label the colours of the page to make things easier later */
 
 /* Setting the body according to the requirements, body means the whole page and general informations of it */
 body{
@@ -60,4 +61,32 @@ body{
 /* Setting the font for headings and nav to make everything in the correct typography */
 h1, h2, h3, nav a {
     font-family: "Lato", sans-serif;
+}
+
+/* Setting the default sizes for each heading and paragraph to help to adjust further accordingly */
+h1{
+    font-size: 2.027rem;
+}
+
+h2{
+    font-size: 1.802rem;
+}
+
+h3{
+    font-size: 1.424rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+/* :root means the root of the document, this will make my custom properties available to the whole page (as a entire thing) 
+
+Base colours of the page: */
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --gold: #d69e3d;
+    --brown: #966f2c;
+    --beige: #f3f0e9;
 }

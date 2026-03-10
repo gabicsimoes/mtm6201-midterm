@@ -193,3 +193,34 @@ nav a:hover{
     color: var(--white);
     border: 2px solid var(--white);
 }
+
+/* Styling the Welcome Section */
+.welcome{
+    padding: 5rem 0.5rem; /* the space between sections, after hero and the start of the welcome */
+}
+
+.welcome p{
+    text-transform: uppercase;
+    font-size: 1.3rem; /* I used this size accord to the recommended but it wasn't closer enough so I tried different ones until find which looks similar for me */
+    font-weight: 500; /* same as later, I tried many numbers and which made more similar I keep it */
+    color: var(--gold);
+    margin-bottom: 0.5rem; /* the space between this text to the h2 */
+    letter-spacing: 0.5px;
+}
+
+.welcome h2{
+    /* I'm not gonna do the text-trasnform to uppercase because this especifically is already uppercase in HTML because it was like this in the content that I received */
+    font-size: 2rem; /*I tried the value of the recommendation but it wasn't similar to me, so I tried this one to be closer */
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.3; /* to create some space between the lines of this title */
+    margin-bottom: 1rem; /* to give some space from the end of this title to the picture below */
+}
+
+/* Start to styling the images for the Welcome Section */
+/* 1st image: a square aligned with the text above */
+.coffeeimg img:first-child{
+    width: 100%;
+    max-width: 550px; /* Honestly, I found this value by trying numbers and what came closer to te mockup, I left it */
+    margin-bottom: 1rem;
+}

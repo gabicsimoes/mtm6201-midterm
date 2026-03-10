@@ -46,3 +46,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Starting styles after CSS Reset */
+/* Starting with Mobile First as recommended */
+
+/* Setting the body according to the requirements, body means the whole page and general informations of it */
+body{
+    background-color: #f3f0e9;
+    font-family: "Karla", sans-serif;
+    color: #000000;
+}
+
+/* Setting the font for headings and nav to make everything in the correct typography */
+h1, h2, h3, nav a {
+    font-family: "Lato", sans-serif;
+}

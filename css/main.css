@@ -63,7 +63,8 @@ h1, h2, h3, nav a {
     font-family: "Lato", sans-serif;
 }
 
-/* Setting the default sizes for each heading and paragraph to help to adjust further accordingly */
+/* Setting the default sizes for each heading and paragraph to help to adjust further accordingly 
+I know I don't have h3, but just in case if I have in the future it is already settled */
 h1{
     font-size: 2.027rem;
 }
@@ -89,4 +90,34 @@ Base colours of the page: */
     --gold: #d69e3d;
     --brown: #966f2c;
     --beige: #f3f0e9;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem; /* 1.5rem means 1.5x (about 150%) of the font-size proportionally. The first value is top-bottom and the second is left-right */
+    background-color: var(--black);
+}
+
+header img{
+    margin-bottom: 1.5rem;
+}
+
+nav ul{
+    display: flex; /* As a default flex is a row, which means this tag organizes things horizontally from left to right */
+    gap: 3rem; /* to create spaces between elements of nav "about us" "menu" "locations" instead of doing margin for each */
+}
+
+nav a{
+    text-decoration: none; /* to remove the underline of the nav */
+    color: var(--white);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out; /* I did this to make more similar than the youtube video displayed for us as an example, when I notice that they have a smoothly transition of the colour when you hover and leave the "button" of this nav */
+}
+
+nav a:hover{
+    color: var(--gold);
 }

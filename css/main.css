@@ -373,3 +373,54 @@ nav a:hover{
     background-color: var(--white);
     color: var(--black);
 }
+
+/* Starting styling the About Us section */
+.about img{
+    width: 100%;
+    height: auto;
+    display: block; /* removes the extra space and makes the image behave like a block element */
+    margin-bottom: 1.5rem;
+}
+
+.about{
+    padding: 0.5rem; /* all 4 sides (top, right, botton, left) has the same value*/
+    margin-bottom: 5rem; /* To create space from this section to the next one */
+}
+
+.about > p:first-of-type{ /* this means the first <p> tag that .about has, to don't change the other <p> tags that has below */
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+}
+
+.about h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.8rem;
+}
+
+.about p{ /* this changes just the other <p> tags that I have on HTML */
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+.button-about{
+    /* This is the style of the button, which is black as bg, font white and uppercase. The padding adjust the size of the rectangle (the button specifically) and I left the same as the other ones to maintain the design, and same for the font-weight and other propeties to design the text according to the example */
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.85rem 2rem;
+    font-weight: 900;
+    margin-top: 1em;
+}
+
+.button-about:hover{
+    background-color: var(--brown); /* I choose brown because looks more similar to the mockup than gold */
+}

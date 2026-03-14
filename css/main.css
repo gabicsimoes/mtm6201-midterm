@@ -424,3 +424,87 @@ nav a:hover{
 .button-about:hover{
     background-color: var(--brown); /* I choose brown because looks more similar to the mockup than gold */
 }
+
+/* Starting the Testimonialls part, which has a black background and all the informations on it */
+.testimonials{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 6rem 0.5rem; /* to adjust the size of the black area as a bg*/
+}
+
+.testimonials > p:first-of-type{
+    /* This is for adjust just the word "testimonials" as subtitle at the top, because I have another paragraphs as the testimonials text and I don't want to change them with this features */
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.testimonials h2{ /* I don't need any specification (as I did for the p) because there's just one h2 in this section */
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+/* here I'm adjusting the images for each person and the text on the images. I prefer to split for each person to understand better instead of just do the same class for every person */
+.jane,
+.scott,
+.susie{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.jane img{
+    width: 100%;
+    aspect-ratio: 1 / 1; /* to make the image square. I know it's not square exactly, but I tried other aspects and becames far from the mockup, so I left like this to be safe */
+    display: block;
+    object-fit: cover;
+}
+
+.scott img,
+.susie img{
+    width: 100%;
+    aspect-ratio: 1 / 1; /* to make the image square */
+    display: block;
+    object-fit: cover;
+    object-position: top; /* to tell them that I want the cut start from the bottom to the top, to don't cut the heads but the shirts, but for jane cut the head that's why I didn't with her */
+}
+
+/* The overlay on the images with a opacity */
+.jane::after,
+.scott::after,
+.susie::after{
+    content: "";
+    position: absolute;
+    inset: 0; /* to fill the entire image */
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1; /* To put in front of the image */
+}
+
+.jane p:first-of-type,
+.scott p:first-of-type,
+.susie p:first-of-type{
+    position: absolute; /* If I just do position:abolute and don't tell where, nothing is gonna happen based on the relative that I had before for them, so for this reason I did the positions: bottom, left and right, to adjust the text on the image and where it gonna be */
+    bottom: 3.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    color: var(--white);
+    font-size: 1rem;
+    z-index: 2; /* To bring the text in front of the overlay */
+}
+
+.jane p:last-of-type,
+.scott p:last-of-type,
+.susie p:last-of-type{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+    z-index: 2; /* To bring the text in front of the overlay */
+}

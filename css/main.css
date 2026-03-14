@@ -284,3 +284,92 @@ nav a:hover{
     line-height: 1.2; /* I adjust this to enhance the readability, crating some space between the lines of the paragraph */
     margin-bottom: 4rem; /* to increase the space between the end of the paragraph to the beginning of the next icon */
 }
+
+/* Starting the Menu and Locations section which is another banner, with an overlay, text and button on it */
+.menu{
+    position: relative; /* To tell that this is the reference for the positions further */
+    min-height: 600px; /* the size of the image in the space that I have */
+    display: flex; /* As a default flex is a row, so we have to put things in column telling this */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* to hidden extra content after the size that I set it, like cut what's exceed */
+    margin-bottom: 6rem; /* the space between sections, which means this section has some space before the next starts */
+}
+
+.menu img{
+    position: absolute;
+    inset: 0; /* to fill the whole container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* to establish the layer for the overlay, which means: 1st image, then overlay, then text, one above another */
+}
+
+.menu::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    inset: 0;
+    z-index: 2; /* this means the overlay is above the image that's why is 2, because the image's z-index is 1 */
+}
+
+.menu > div{
+    position: relative;
+    z-index: 3; /* this means the text is above everything that's why is 3 */
+    margin-bottom: 5rem; 
+}
+
+.menu p{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.menu h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 1rem;
+    margin-bottom: 3rem; /* the space between the h2 to the botton below */
+}
+
+.button-menu{
+    /* I just copy and paste the style that I did for the hero section banner because they're the same. I hope I'm not doing something that I can't */
+    /* styling the button accord to the mockup */
+    background-color: var(--white); /* create a background like a highlight in the text of the button */
+    color: var(--black); /* then, this is the colour of the text */
+    padding: 0.85rem 2rem; /* this makes the highlightet (bg colour) bigger and the proper size of the button styles */
+    text-transform: uppercase; /* to make the text uppercase without change de HTML */
+    text-decoration: none; /* to remove the underline default of the a href */
+    font-weight: 900; /* I did the same because I tought bold isn't enough, so I tried many numbers and this looks more similar to the mockup for me */
+    margin-top: 1.5rem; /* to create a space between the paragraph and the button */
+    margin-bottom: 10rem;
+}
+
+.button-menu:hover{
+    /* style the hover state as shown in the youtube video, which is, a white border, bg colour gold and the font white */
+    background-color: var(--gold);
+    color: var(--white);
+    border: 3px solid var(--white);
+}
+
+.button-location{
+    border: 3px solid var(--white);
+    background-color: transparent; /* Without this it was not background, but I feel safer to include this explaining that there's no background colour for this button */
+    color: var(--white);
+    padding: 0.85rem 2rem; /* I did the same padding of the .button-menu and I don't know why looks different, but I'll keep it just to be safe */
+    text-transform: uppercase;
+    text-decoration: none; /* remove the underline */
+    font-weight: 900;
+}
+
+.button-location:hover{
+    /* style the hover state as shown in the youtube video, which is, exaclty like the non-hover for the .button-menu. Background white and colour black for the text */
+    background-color: var(--white);
+    color: var(--black);
+}

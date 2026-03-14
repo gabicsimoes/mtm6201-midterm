@@ -239,3 +239,48 @@ nav a:hover{
     width: 100%;
     max-width: 350px; /* This size was the size that fits better to align to the first image */
 }
+
+/* Start styling the Visit Section, which is all the content aligned center to the other content of the page, and one icon under other */
+.visit{
+    text-align: center;
+    padding: 2rem 1rem; /* to create some space between sections */
+}
+
+.visit > p{
+    /* to move the direct child (>) of the class visit, which is a paragraph and to do this I used this sign >, this just works to elements inside of the class */
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.visit > h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem; /* I know I can use just margin, but the values always makes me confuse, and I don't remeber which is top, bottom, left and right. And, margin-top or margin-bottom is more clear to me to understand that I'm moving a space for the bottom or for the top of something */
+}
+
+.visit div{
+    /* adjusting the div of the visit class as a whole to adjust the margin */
+    margin-bottom: 3rem;
+}
+
+.visit div img{
+    width: 200px;
+    margin-bottom: 1.5rem; /* create a space between the icon and the h2 and p after */
+}
+
+.visit div h2{
+    text-transform: uppercase;
+    font-size: 1.8rem; /* I tried 2rem as I'm doing for all h2 but looks too much for this following the mockup, so I chosse by looking a little bit less to make more similar to the mockup */
+    font-weight: 700;
+    margin-bottom: 0.8rem; /* Same here. I was testing values and which looks similar to the mockup, I keep it.*/
+}
+
+.visit div p{
+    font-size: 1.3rem;
+    line-height: 1.2; /* I adjust this to enhance the readability, crating some space between the lines of the paragraph */
+    margin-bottom: 4rem; /* to increase the space between the end of the paragraph to the beginning of the next icon */
+}

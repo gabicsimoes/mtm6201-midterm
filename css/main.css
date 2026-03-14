@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -52,6 +53,11 @@ table {
 /* After I will set up all the foundation like background, colour, font, font-size, and label the colours of the page to make things easier later */
 
 /* Setting the body according to the requirements, body means the whole page and general informations of it */
+.wrapper{ /* In the end, I realized that my content was not in the center, then I saw the instructor of the wrapper with this max-widht so I did to stay in the requirements, even I know there are some things wrong that I didn't know how to fix properly */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 body{
     background-color: #f3f0e9;
     font-family: "Karla", sans-serif;

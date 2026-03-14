@@ -20,9 +20,11 @@
 <body>
     <div class="wrapper"> <!--I created a wrapper on HTML because at the end I realized that the whole content was in the center of the page, so I did a wrapper for the whole HTML finishing after footer to adjust the body on CSS -->
     <!-- Creating the header of the page, wich contains the logo and the navigation menu, after probably I will have to add an ID or Class to style on CSS -->
-    <header>
+    <a href="#main-content" class="skip-link">Skip to the main content</a>
+    <header role="banner"> <!-- Adding ARIA Roles: banner is used for an element that contains site wide content -->
         <img src="images/my-coffee-shop-logo.svg" alt="Coffee Shop Logo with two coffee beans and the name of the company called My Coffee Shop">
-        <nav>
+        <nav role="navigation" aria-label="Main Navigation"> <!-- role tells the users that this is the site's main navigation menu of the site
+        label provides a descriptive label for assistive technologies, to help the readers understand that this is the main menu of the page -->
             <ul>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Menu</a></li>
@@ -32,7 +34,7 @@
     </header>
 
     <!-- Main Section: when I will put the entire content of the page -->
-     <main>
+     <main id="main-content" role="main"> <!-- main: identifies the primary content of the page -->
         <!-- 1ST SECTION: it will be the banner of the page including the image, title, paragraph and the button -->
         <section class="banner">
         <img src="images/hero-background.jpg" alt="A woman with a yellow touque smilling while using a coffee machine">
@@ -140,7 +142,7 @@
             </div>
             </section>
      </main>
-    <footer>
+    <footer role="contentinfo"> <!-- identifies the site's footer and the information on it -->
         <!-- I don't know if I *need* put a paragraph for the footer but I used to and I think it's safe -->
         <p>© My Coffee Company 2024</p>
     </footer>

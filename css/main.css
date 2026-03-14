@@ -223,4 +223,19 @@ nav a:hover{
     width: 100%;
     max-width: 550px; /* Honestly, I found this value by trying numbers and what came closer to te mockup, I left it */
     margin-bottom: 1rem;
+    grid-column: 1 / -1; /* maintain the frist image fill the entire fisrt column, without moving the other ones to come close to it after grid*/
+}
+
+.coffeeimg{
+    /* this creates the colunm for the others images except the 1st one, which means repeat 2 columns proportionally */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.coffeeimg img:not(:first-child){
+    /* this means move the images but not the frist one 
+    the goal is position the 2 to 5 image fits under the frist image, in two columns and they tweo should have align horizontally the size fo the first image */
+    width: 100%;
+    max-width: 350px; /* This size was the size that fits better to align to the first image */
 }

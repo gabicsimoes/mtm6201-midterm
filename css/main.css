@@ -453,7 +453,7 @@ nav a:hover{
 .scott,
 .susie{
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .jane img{
@@ -507,4 +507,20 @@ nav a:hover{
     font-size: 1.3rem;
     font-weight: 500;
     z-index: 2; /* To bring the text in front of the overlay */
+}
+
+/* Footer of the page, maintain the black bg and a thin beige line spliting the sections (testimonials to footer) */
+footer{
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+footer::before{
+    content: "";
+    display: block;
+    width: calc(100% - 1.5rem); /* I did this cal to find the size of the line, like 100% he size I used everytime, and I was trying different numbers in the rem until find this 1.5 which looks similar to the mockup for me */
+    margin: 0 auto 1rem auto;
+    border-top: 2px solid rgba(61, 52, 38, 0.5) /* I didn't know which colour is this one because anyone was the same to the mockup, so I was picking random colours from the selector here, and which one looks similar for me I left it */
 }

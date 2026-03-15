@@ -657,6 +657,24 @@ footer::before{
     .about > a{
         grid-column: 3/4;
     }
+
+    /* Testimonials part */
+    .testimonials{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem; /* creates space between the images */
+    }
+
+    .testimonials > p,
+    .testimonials > h2{
+        grid-column: 1/-1;
+    }
+
+    .testimonials img{
+    width: 100%;
+    height: 450px; /* to control the vertical axis for the images, to make them more vertical */
+    object-fit: cover;
+    }
 }
 
 /* DESKTOP */

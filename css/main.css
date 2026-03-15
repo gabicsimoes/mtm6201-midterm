@@ -542,5 +542,99 @@ footer::before{
     display: block;
     width: calc(100% - 1.5rem); /* I did this cal to find the size of the line, like 100% he size I used everytime, and I was trying different numbers in the rem until find this 1.5 which looks similar to the mockup for me */
     margin: 0 auto 1rem auto;
-    border-top: 2px solid rgba(61, 52, 38, 0.5) /* I didn't know which colour is this one because anyone was the same to the mockup, so I was picking random colours from the selector here, and which one looks similar for me I left it */
+    border-top: 2px solid rgba(61, 52, 38, 0.5); /* I didn't know which colour is this one because anyone was the same to the mockup, so I was picking random colours from the selector here, and which one looks similar for me I left it */
+}
+
+/* Starting Media Query */
+
+/* 1st will be for mobile to adjust some issues that I noticed after all */
+@media screen and (max-width: 480px){
+    .wrapper{
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px){
+    /* Welcome Section changes */
+
+    /* Layout of the images using grid. I did my best to fix it, but I was strugglinig a lot, so I left in the way that was my best honestly. */
+    .coffeeimg{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* I did 5 because I can't do it with just 4, I tried before but it was weird. But to explain, this means 5 columns in the same size (1fr means divided the 5 equally in 1 fraction */
+        grid-template-rows: repeat(4, auto); /* The same for the rows here */
+        gap: 1rem;
+    }
+
+    .coffeeimg img:nth-child(1){
+        grid-column: 1/3; /* This tells to fill from colunm 1 to 3*/
+        grid-row: 1/3; /* This tells to fill from row 1 to 3*/
+        width: 100%;
+        aspect-ratio: 1/1; /* to maintain the images in a square */
+        object-fit: cover;
+    }
+
+    .coffeeimg img:nth-child(2){
+        grid-column: 3/4; /* This tells to fill from colunm 3 to 4*/
+        grid-row: 1/2; /* This tells to fill from row 1 to 2*/
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .coffeeimg img:nth-child(3){
+        grid-column: 4/5; /* This tells to fill from colunm 4 to 5*/
+        grid-row: 1/2; /* This tells to fill from rows 1 to 2*/
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .coffeeimg img:nth-child(4){
+        grid-column: 3/4; /* This tells to fill from colunm 3 to 4*/
+        grid-row: 2/3; /* This tells to fill from row 2 to 3*/
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .coffeeimg img:nth-child(5){
+        grid-column: 4/5; /* This tells to fill from colunm 4 to 5*/
+        grid-row: 2/3; /* This tells to fill from row 2 to 3*/
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    /* Visit Section changes - Icons */
+    .visit{
+        display: grid; /* Creating a grid for the entire visit section */
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+    }
+
+    /* Adjusting the titles of the section */
+    .visit >p:first-of-type,
+    .visit >h2:first-of-type{
+        grid-column: 1/-1;
+        text-align: center;
+    }
+
+    /* Adjusting the icons an text of the icons. It's far from perfect, but I did my best and the only way that I knew, honestly. */
+    .visit > div:nth-of-type(3){
+        grid-column: 2/3;
+    }
+
+    .visit > div:nth-of-type(2){
+        grid-column: 3/4;
+    }
+
+    
+
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1100px){
+
 }

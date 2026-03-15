@@ -78,6 +78,16 @@ body{
     color: #000000;
 }
 
+/* Adding a global transition to accomplish this part of the requirement in these buttons below */
+a,
+button,
+.button-banner,
+.button-menu,
+.button-location,
+.button-about {
+    transition: all 0.3s ease-in-out; /* all to apply in all buttons, the duration of this action is 0.3s, and ease-in-out is to start and finish smoothly */
+}
+
 /* Setting the font for headings and nav to make everything in the correct typography */
 h1, h2, h3, nav a {
     font-family: "Lato", sans-serif;

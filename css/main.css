@@ -88,6 +88,17 @@ button,
     transition: all 0.3s ease-in-out; /* all to apply in all buttons, the duration of this action is 0.3s, and ease-in-out is to start and finish smoothly */
 }
 
+/* Animation to accomplish the requirements 
+I choose this animation to apply in the whole page that's why I applied the class in body. When you refresh the page, its smootly changes the opacity, when I refresh the page is kind transparent and smootly and page is appearing lightly and in elegent way */
+.fade-in{
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 /* Setting the font for headings and nav to make everything in the correct typography */
 h1, h2, h3, nav a {
     font-family: "Lato", sans-serif;
